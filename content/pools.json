@@ -1,0 +1,406 @@
+{
+  "categories": [
+    {
+      "id": "subgenre",
+      "label": "Subgenre",
+      "symbol": "book",
+      "options": [
+        {
+          "id": "grimdark",
+          "title": "Grimdark",
+          "description": "Power is won with blood and kept with lies. Nobody stays clean, and the heroes are simply the people who haven't been caught yet."
+        },
+        {
+          "id": "epic-quest",
+          "title": "Epic Quest",
+          "description": "A long journey, a group of companions who shouldn't get along, and a goal that seems impossible. The fate of many rests on a few tired travellers."
+        },
+        {
+          "id": "cosy",
+          "title": "Cosy Fantasy",
+          "description": "Low stakes, warm kitchens and found family. The biggest danger might be a ruined festival, but it matters enormously to the people involved."
+        },
+        {
+          "id": "dark-fairy-tale",
+          "title": "Dark Fairy Tale",
+          "description": "Bargains with strange beings, rules that must never be broken, and a forest that remembers. Everything has a price, and it is always paid in full."
+        },
+        {
+          "id": "mythic",
+          "title": "Mythic Epic",
+          "description": "Gods walk among mortals, and their quarrels move mountains. Every act echoes for generations, and ordinary people are caught in games far bigger than themselves."
+        },
+        {
+          "id": "sword-and-sorcery",
+          "title": "Sword and Sorcery",
+          "description": "Fast, personal, sweaty adventure: a lone warrior or rogue, a treasure, and a dangerous rival who wants it too. Survive tonight; worry about tomorrow tomorrow."
+        },
+        {
+          "id": "court-intrigue",
+          "title": "Court Intrigue",
+          "description": "Whispers in corridors, alliances sealed over dinner and broken by dawn. The sharpest weapon is information, and everyone is keeping score."
+        },
+        {
+          "id": "tragedy",
+          "title": "Tragic Fantasy",
+          "description": "From the first page, we know someone will fall. The story is about why it happens, and whether anything good survives the fall."
+        },
+        {
+          "id": "comic",
+          "title": "Comic Fantasy",
+          "description": "The world runs on paperwork, bad luck and misunderstandings. Ridiculous things are treated with total seriousness, and the jokes reveal something true."
+        },
+        {
+          "id": "mystery",
+          "title": "Fantasy Mystery",
+          "description": "Someone has died, disappeared, or stolen something that should be impossible to steal. A puzzle must be solved, and every clue makes the world stranger."
+        },
+        {
+          "id": "folk-horror",
+          "title": "Folk Horror",
+          "description": "A closed community with old customs that nobody explains to outsiders. Something is wrong beneath the friendly faces, and the land itself seems to be watching."
+        },
+        {
+          "id": "coming-of-age",
+          "title": "Coming of Age",
+          "description": "Someone crosses a line they can never uncross: childhood, innocence, an old life. The world grows larger, certainties crack, and they must decide who to become."
+        }
+      ]
+    },
+    {
+      "id": "magic",
+      "label": "Magic",
+      "symbol": "eye",
+      "options": [
+        {
+          "id": "none",
+          "title": "No Magic",
+          "description": "Magic does not exist and never has. Whatever people believe, the world runs on muscle, wit, weather and luck."
+        },
+        {
+          "id": "gone",
+          "title": "The Magic Is Gone",
+          "description": "Magic vanished a generation ago. Its ruined wonders remain, and so do the people who still remember what it felt like."
+        },
+        {
+          "id": "forbidden",
+          "title": "Forbidden Art",
+          "description": "Magic is real but outlawed. Anyone caught using it is punished harshly, so people with the gift hide it, sell it in secret, or become informers."
+        },
+        {
+          "id": "con",
+          "title": "Magic Is a Con",
+          "description": "Everyone believes in magic, but every wonder is a trick: chemistry, sleight of hand, clever lies. Some of the tricksters have started to believe their own act."
+        },
+        {
+          "id": "cost",
+          "title": "Magic of Cost",
+          "description": "Every spell takes something from the caster: a memory, a year of life, the colour of their eyes. Great power leaves people hollow."
+        },
+        {
+          "id": "song",
+          "title": "Song-Weaving",
+          "description": "Magic is sung. Melodies shape stone, calm storms or rot wood, and a choir can do what no single voice would dare. Silence is a weapon."
+        },
+        {
+          "id": "spirits",
+          "title": "Spirit Bargains",
+          "description": "Nothing is cast; everything is negotiated. Spirits of rivers, roads and hearths grant favours, but they are moody, take words literally, and never forget a debt."
+        },
+        {
+          "id": "ink",
+          "title": "Living Ink",
+          "description": "Words written or painted in rare pigments become true for as long as the writing survives. Scribes are powerful, and fire is feared."
+        },
+        {
+          "id": "wild",
+          "title": "Wild Surges",
+          "description": "Magic happens by itself, in sudden bursts: a field turns to glass, a goat starts to speak. Nobody controls it; people simply try to live around it."
+        },
+        {
+          "id": "bloodline",
+          "title": "Inherited Gift",
+          "description": "Only certain families carry magic, passed from parent to child. Their power has made them rulers, and their children are watched, guarded and married off for advantage."
+        },
+        {
+          "id": "dreams",
+          "title": "Dream-Walking",
+          "description": "Magic lives in sleep. A few people can enter the dreams of others to heal, spy or steal secrets, and the waking world is shaped by what happens there."
+        },
+        {
+          "id": "ordinary",
+          "title": "Ordinary Magic",
+          "description": "Magic is common and a little boring: charms that keep milk fresh, fires that light on command. Everyone uses it, nobody thinks about it, and it often goes wrong."
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "label": "Technology Level",
+      "symbol": "gear",
+      "options": [
+        {
+          "id": "stone",
+          "title": "Stone and Bone",
+          "description": "Tools of flint, bone and wood. Fire is precious, the group is everything, and the nearest strangers may be a week's walk away."
+        },
+        {
+          "id": "bronze",
+          "title": "Age of Bronze",
+          "description": "The first cities, the first writing, the first organised armies. Bronze is rare and precious, chariots rule the battlefield, and kings claim heaven chose them."
+        },
+        {
+          "id": "iron",
+          "title": "Early Iron",
+          "description": "Cheap iron tools have changed farming and war. Hill forts, river trade, and ambitious warlords rising where village elders once decided everything."
+        },
+        {
+          "id": "roads",
+          "title": "Roads and Aqueducts",
+          "description": "An age of great engineering: paved roads, aqueducts, arched bridges and concrete. Armies, grain and news travel faster than ever before."
+        },
+        {
+          "id": "castles",
+          "title": "Castles and Mills",
+          "description": "Stone castles, heavy ploughs, windmills and watermills. Most people farm, few can read, and a good sword costs more than a house."
+        },
+        {
+          "id": "sail",
+          "title": "Powder and Sail",
+          "description": "Ocean-going ships, early cannons and the printing press. Maps still have blank edges, and new ideas spread faster than rulers would like."
+        },
+        {
+          "id": "clockwork",
+          "title": "Clockwork Age",
+          "description": "Precise gears, springs and lenses. Mechanical clocks, telescopes and automatons fascinate the rich, and scholars argue whether the universe itself is a machine."
+        },
+        {
+          "id": "steam",
+          "title": "Steam and Smoke",
+          "description": "Coal-fired engines, factories and the first railways. Cities swell with workers, the air turns grey, and old trades disappear within a decade."
+        },
+        {
+          "id": "electric",
+          "title": "Wire and Lightning",
+          "description": "Electricity is new: telegraph lines, electric light, the first telephones. Messages cross continents in minutes, and many people find it deeply unnatural."
+        },
+        {
+          "id": "engines",
+          "title": "Engines and Airships",
+          "description": "Combustion engines, early aircraft, radio broadcasts. The world feels suddenly small, and war can now reach anyone, anywhere."
+        },
+        {
+          "id": "after-the-fall",
+          "title": "After the Fall",
+          "description": "A highly advanced civilisation collapsed long ago. People live with simple tools among ruins they don't understand, treating old machines as holy or cursed."
+        },
+        {
+          "id": "uneven",
+          "title": "Uneven Progress",
+          "description": "Wildly mixed technology: printing presses but no metal tools, or steam engines but no compass. One unexpected invention has changed everything around it."
+        }
+      ]
+    },
+    {
+      "id": "setting",
+      "label": "Setting",
+      "symbol": "compass",
+      "options": [
+        {
+          "id": "islands",
+          "title": "Scattered Islands",
+          "description": "Hundreds of small islands linked by canoes, trade winds and old family ties. The sea feeds everyone, and every year it takes someone."
+        },
+        {
+          "id": "oasis",
+          "title": "Salt-Road Oasis",
+          "description": "A walled oasis where desert trade routes cross. Water is wealth, guests are sacred, and every caravan brings rumours from distant lands."
+        },
+        {
+          "id": "delta",
+          "title": "Monsoon Delta",
+          "description": "A maze of rivers, rice fields and houses on stilts. Life follows the rains: months of flood, months of drought, and festivals for both."
+        },
+        {
+          "id": "mountain-stair",
+          "title": "The Mountain Stair",
+          "description": "A community carved into a cliff face, reached by a single narrow stair. Its leaders guard old knowledge and decide who may climb."
+        },
+        {
+          "id": "long-nights",
+          "title": "Land of Long Nights",
+          "description": "A frozen land of endless winter nights and brief summers. Every family depends on the herds, the hunt and each other; exile means death."
+        },
+        {
+          "id": "great-city",
+          "title": "City of a Million",
+          "description": "A vast, crowded capital where a dozen languages are spoken on one street. You can buy anything here, including someone's silence."
+        },
+        {
+          "id": "underground",
+          "title": "Beneath the Earth",
+          "description": "A network of caves and tunnels where people never see the sky. Light is grown, traded or stolen, and the deepest passages have never been mapped."
+        },
+        {
+          "id": "canopy",
+          "title": "Rainforest Canopy",
+          "description": "Villages built high in the trees of an ancient rainforest, joined by rope bridges. The forest floor below is dark, dangerous and rarely visited."
+        },
+        {
+          "id": "steppe",
+          "title": "Open Steppe",
+          "description": "Grassland to every horizon. The people move with their herds and carry their homes with them; borders mean nothing, and the sky means everything."
+        },
+        {
+          "id": "sinking-city",
+          "title": "The Sinking City",
+          "description": "A once-great city slowly sinking into the marsh. The rich live in the upper towers, everyone else wades, and the flooded streets hide forgotten things."
+        },
+        {
+          "id": "voyage",
+          "title": "The Long Voyage",
+          "description": "A single vessel on a long journey: a sea-ship, a river barge, or something stranger. Nobody can leave, and everyone knows everyone else's business."
+        },
+        {
+          "id": "border-village",
+          "title": "Border Village",
+          "description": "A small village on the frontier between two powers that both claim it. Families have relatives on each side, and loyalty is a daily decision."
+        }
+      ]
+    },
+    {
+      "id": "role",
+      "label": "Character Role",
+      "symbol": "mask",
+      "options": [
+        {
+          "id": "healer",
+          "title": "Healer",
+          "description": "Someone who mends bodies, with herbs, knives or prayer. They see people at their weakest and know more secrets than any spy."
+        },
+        {
+          "id": "deserter",
+          "title": "Deserter",
+          "description": "A soldier who walked away from their army. Some call it cowardice, some call it conscience. Their old comrades are still looking for them."
+        },
+        {
+          "id": "thief",
+          "title": "Thief with a Code",
+          "description": "A skilled thief with strict personal rules about who they will and won't steal from. Those rules are about to be tested."
+        },
+        {
+          "id": "heir",
+          "title": "Unwilling Heir",
+          "description": "Next in line to lead a family, clan, guild or nation, and wishing they weren't. Everyone has plans for them; they have only doubts."
+        },
+        {
+          "id": "memory-keeper",
+          "title": "Keeper of Memory",
+          "description": "Keeper of a community's history, in books, songs or knotted cords. They know the official story, and they know exactly where it is wrong."
+        },
+        {
+          "id": "trader",
+          "title": "Travelling Trader",
+          "description": "Buys low, sells high, and moves on before trouble arrives. Speaks a little of many languages and trusts nobody completely."
+        },
+        {
+          "id": "executioner",
+          "title": "Retired Executioner",
+          "description": "Carried out the harshest sentences of the law for twenty years. Now they want a quiet life, but the faces of the condemned have not gone away."
+        },
+        {
+          "id": "apprentice",
+          "title": "Apprentice",
+          "description": "Halfway through learning a craft from a demanding master. Not ready to work alone, but circumstances are about to force them."
+        },
+        {
+          "id": "stranger",
+          "title": "The Stranger",
+          "description": "Newly arrived from far away, with unfamiliar clothes, manners and beliefs. Nobody here understands them, and they don't understand anybody either."
+        },
+        {
+          "id": "parent",
+          "title": "Desperate Parent",
+          "description": "An ordinary person with a child to protect, ready to do anything to keep that child safe. Ordinary people can become very dangerous."
+        },
+        {
+          "id": "impostor",
+          "title": "Impostor",
+          "description": "Living under a false identity, perhaps a dead noble's name or a forged rank. The lie has lasted for years. Someone has just recognised them."
+        },
+        {
+          "id": "gatekeeper",
+          "title": "Gatekeeper",
+          "description": "Decides who gets in and who stays out: at a city gate, a border or a temple door. Bribes are offered daily; refusing them has a cost."
+        }
+      ]
+    },
+    {
+      "id": "conflict",
+      "label": "Central Conflict",
+      "symbol": "swords",
+      "options": [
+        {
+          "id": "revenge",
+          "title": "Debt of Blood",
+          "description": "Someone the character loved was wronged, and the person responsible is now powerful and protected. Revenge is possible, but it will cost everything."
+        },
+        {
+          "id": "hunger",
+          "title": "Hunger Season",
+          "description": "The food will run out long before the next harvest or hunt. Someone must decide who eats, who leaves, and who goes searching for help that may not exist."
+        },
+        {
+          "id": "loving-lie",
+          "title": "A Loving Lie",
+          "description": "The character discovers that the person they trust most has lied to them for years, and that the lie was meant to protect them."
+        },
+        {
+          "id": "divided-loyalty",
+          "title": "Divided Loyalty",
+          "description": "Two people the character loves stand on opposite sides of a conflict. Choosing one means losing the other; refusing to choose may lose both."
+        },
+        {
+          "id": "wrong-prophecy",
+          "title": "The Wrong Prophecy",
+          "description": "Everyone believes an old prophecy names the character as saviour or destroyer. The character knows it is a mistake, but nobody will listen."
+        },
+        {
+          "id": "something-coming",
+          "title": "Something Is Coming",
+          "description": "A powerful outside force is approaching: an army, a rival nation, something nobody understands. The community must choose to fight, flee, bargain or surrender."
+        },
+        {
+          "id": "missing",
+          "title": "Someone Is Missing",
+          "description": "A person vanished without a trace three days ago. The character is the only one who believes they are still alive."
+        },
+        {
+          "id": "witness",
+          "title": "The Witness",
+          "description": "The character saw something they were never supposed to see. Now powerful people want them silent, and nobody believes their story."
+        },
+        {
+          "id": "old-promise",
+          "title": "An Old Promise",
+          "description": "Years ago the character swore an oath. Today the person they swore it to has come to collect, and keeping the promise means doing something terrible."
+        },
+        {
+          "id": "offer-of-power",
+          "title": "The Offer of Power",
+          "description": "The character is offered real power: a seat, a title, a crown. To take it, they must become the kind of person they have always despised."
+        },
+        {
+          "id": "impossible-task",
+          "title": "The Impossible Task",
+          "description": "The character must complete a ridiculous task before a deadline: win a contest, deliver a parcel, build something nobody has built. Failure will be very public."
+        },
+        {
+          "id": "escape",
+          "title": "Get Out Alive",
+          "description": "The character is trapped (imprisoned, besieged or lost) and must escape with companions who slow them down, disagree with them, or can't be trusted."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Only the site's own files may load: no external requests of any kind. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0e0b0a">
+  <meta name="description" content="Draw six cards and build a character and a world for a fantasy short story.">
+  <title>Fantasy Story Forge</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/cormorant-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/source-serif-4-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="src/styles.css">
+  <script type="module" src="src/main.js"></script>
+</head>
+<body>
+  <main id="app" class="app">
+    <div class="loading" role="status">
+      <p class="loading-title">Fantasy Story Forge</p>
+      <p class="loading-msg">Shuffling the cards…</p>
+      <p class="loading-help">Still nothing? If you opened index.html directly from your computer, it needs a local web server. See README.md.</p>
+    </div>
+  </main>
+  <p id="announcer" class="sr-only" aria-live="polite"></p>
+  <noscript><p class="noscript">The Story Forge needs JavaScript to run. Please switch it on and reload.</p></noscript>
+</body>
+</html>
