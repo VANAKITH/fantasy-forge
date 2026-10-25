@@ -21,6 +21,7 @@ function newRun(mode) {
     tiles: [],
     selectedIndex: null, // open mode: highlighted but not yet confirmed
     picked: false, // a choice has been locked in on this step
+    revealed: false, // blind mode: the flip animation has finished
     rerollUsed: false,
     choices: [], // [{ category, option }] in step order
   };
@@ -42,6 +43,7 @@ function dealStep() {
   run.tiles = draw(currentCategory().options, TILES_PER_STEP);
   run.selectedIndex = null;
   run.picked = false;
+  run.revealed = false;
   showStep();
 }
 
@@ -78,10 +80,11 @@ function confirm() {
   advance();
 }
 
-function pick(index) {
+async function pick(index) {
   if (run.mode !== 'blind' || run.picked) return;
   lockIn(index);
-  ui.revealBlind(root, index);
+  await ui.revealBlind(root, index, { rerollAvailable: !run.rerollUsed });
+  run.revealed = true;
 }
 
 function next() {
@@ -89,13 +92,24 @@ function next() {
   advance();
 }
 
+// Open mode: usable before confirming. Blind mode: usable only after the
+// reveal, and it throws away the card just drawn.
 function reroll() {
-  if (run.rerollUsed || run.picked) return;
+  if (run.rerollUsed) return;
+  const blind = run.mode === 'blind';
+  if (blind ? !run.revealed : run.picked) return;
+  if (blind) run.choices.pop();
   run.rerollUsed = true;
   run.tiles = draw(currentCategory().options, TILES_PER_STEP, run.tiles);
   run.selectedIndex = null;
+  run.picked = false;
+  run.revealed = false;
   showStep({ focusTiles: true });
-  ui.announce('Four new cards drawn. You have no re-rolls left.');
+  ui.announce(
+    blind
+      ? 'Card discarded. Four new face-down cards dealt. This pick is final.'
+      : 'Four new cards drawn. You have no re-rolls left.',
+  );
 }
 
 function advance() {

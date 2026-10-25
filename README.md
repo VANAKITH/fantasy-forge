@@ -129,8 +129,10 @@ CONTENT_NOTES.md      review notes on the drafted content
 
 - At each step, 4 options are drawn at random from that category, with no repeats within the step. Categories are independent: earlier picks never filter later ones.
 - **Open cards:** tap to select (changeable), then *Confirm choice*.
-- **Blind draw:** tap a face-down card. It flips and locks immediately, then the other three flip face-up, dimmed, so the student sees what they missed. Then *Next step*.
-- **One re-roll per run**, usable on any step before picking. It replaces all four cards with four that weren't just shown.
+- **Blind draw:** tap a face-down card. It flips at once, then the other three flip face-up, dimmed, so the student sees what they missed. Then *Next step*, or the re-roll if it is still unused.
+- **One re-roll per run**, usable on any step. It replaces all four cards with four that weren't just shown.
+  - *Open cards:* before confirming.
+  - *Blind draw:* only after the reveal. It discards the card just drawn and deals four new face-down cards; that second pick is final. (Re-rolling unseen cards would change nothing the student can see.)
 - No going back. *Start over* on the result screen needs two presses, so a stray tap can't wipe a card a student is writing from.
 - Keyboard: Tab to move, Enter or Space to pick. With *reduce motion* switched on in the operating system, card flips become fades.
 

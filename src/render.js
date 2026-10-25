@@ -77,7 +77,12 @@ export function renderIntro(root, { categories }, actions, { focus = true } = {}
       modeButton('open', 'Open cards', 'See all four options at every step, and choose the one you want.'),
       modeButton('blind', 'Blind draw', 'Pick one of four face-down cards at every step. Fate decides; you write.'),
     ),
-    h('p', { class: 'intro-note' }, 'You get one re-roll for the whole run. Once you start, the mode cannot be changed.'),
+    h(
+      'p',
+      { class: 'intro-note' },
+      'You get one re-roll for the whole run: with open cards before you choose, with a blind draw after you see your card. ' +
+        'Once you start, the mode cannot be changed.',
+    ),
   );
 
   mount(root, screen, focus ? title : null);
@@ -111,7 +116,8 @@ export function renderStep(root, view, actions, { focusTiles = false } = {}) {
       class: 'reroll',
       type: 'button',
       'data-role': 'reroll',
-      disabled: !rerollAvailable,
+      // Blind mode: the re-roll only unlocks after the reveal.
+      disabled: blind || !rerollAvailable,
       'aria-describedby': 'reroll-help',
       onclick: actions.reroll,
     },
@@ -132,7 +138,7 @@ export function renderStep(root, view, actions, { focusTiles = false } = {}) {
         'p',
         { class: 'step-hint' },
         blind
-          ? 'Four cards lie face down. Pick one: your choice is final.'
+          ? 'Four cards lie face down. Pick one and it is revealed at once.'
           : 'Read the four cards and select one. Then confirm your choice.',
       ),
     ),
@@ -141,10 +147,20 @@ export function renderStep(root, view, actions, { focusTiles = false } = {}) {
       'div',
       { class: 'action-bar' },
       reroll,
-      h('p', { class: 'action-status', 'data-role': 'status' }, blind ? 'Pick a card.' : 'Select a card.'),
+      h(
+        'p',
+        { class: 'action-status', 'data-role': 'status' },
+        blind ? (rerollAvailable ? 'Pick a card. You can re-roll once you see it.' : 'Pick a card. This pick is final.') : 'Select a card.',
+      ),
       primary,
     ),
-    h('p', { class: 'sr-only', id: 'reroll-help' }, 'Replaces all four cards with new ones. You get one re-roll for the whole run.'),
+    h(
+      'p',
+      { class: 'sr-only', id: 'reroll-help' },
+      blind
+        ? 'After your card is revealed: discards it and deals four new face-down cards. You get one re-roll for the whole run.'
+        : 'Replaces all four cards with new ones. You get one re-roll for the whole run.',
+    ),
   );
 
   mount(root, screen, focusTiles ? tileButtons[0] : heading);
@@ -207,13 +223,13 @@ export function markSelected(root, index) {
   root.querySelector('[data-role="status"]').textContent = `Selected: ${title}`;
 }
 
-// Blind mode: flip the picked card, then the rest (dimmed), then show Next.
-export async function revealBlind(root, pickedIndex) {
+// Blind mode: flip the picked card, then the rest (dimmed), then show Next
+// and, if the run still has it, the re-roll.
+export async function revealBlind(root, pickedIndex, { rerollAvailable }) {
   const tiles = [...root.querySelectorAll('.tile')];
   const beat = prefersReducedMotion() ? REVEAL_BEAT_REDUCED_MS : REVEAL_BEAT_MS;
   const status = root.querySelector('[data-role="status"]');
 
-  root.querySelector('[data-role="reroll"]').disabled = true;
   root.querySelector('.tiles').classList.add('is-locked');
   tiles.forEach((tile) => tile.setAttribute('aria-disabled', 'true'));
 
@@ -232,6 +248,8 @@ export async function revealBlind(root, pickedIndex) {
   if (!next) return; // screen was replaced mid-animation
   next.hidden = false;
   next.focus();
+  root.querySelector('[data-role="reroll"]').disabled = !rerollAvailable;
+  if (rerollAvailable) status.textContent = `You drew: ${title}. Keep it, or re-roll once.`;
   tiles.forEach((tile) => {
     tile.disabled = true;
     tile.removeAttribute('aria-disabled');
